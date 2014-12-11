@@ -10,15 +10,15 @@
     </style>
 </head>
 <body>
+
+    
     <div id="screen">
         <header id="header" class="mt20">
             <div class="fr">
                 <div id="contact-me" style="margin-top: 42px!important;">
                     <div class="social">
-                        <a target="_blank" class="weibo" href="http://weibo.com/goruby" title="Weibo">Weibo</a>
-                        <a target="_blank" class="facebook" href="https://www.facebook.com/ulric.qin" title="Facebook">Facebook</a>
-                        <a target="_blank" class="twitter" href="https://twitter.com/UlricQin" title="Twitter">Twitter</a>
-                        <a target="_blank" class="github" href="https://github.com/UlricQin" title="GitHub">GitHub</a>
+                        <a target="_blank" class="weibo" href="http://weibo.com/wonderlai" title="Weibo">Weibo</a>
+                        <a target="_blank" class="github" href="https://github.com/docooler" title="GitHub">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -32,18 +32,23 @@
             <div style="clear:both;"></div>
             <hr>
         </header>
-        {{.LayoutContent}}
-
+        {{.LayoutContent}}   
+    
 
 <div class="clear"></div>
 <footer>
     <div class="site-source">
-        <a href="/">Beego-Blog</a> is open source on <a href="https://github.com/UlricQin/beego-blog" target="_blank">GitHub</a>.<br />
+        <a href="/">Blog</a> is open source on <a href="https://github.com/UlricQin/beego-blog" target="_blank">GitHub</a>.<br />
         Patches, suggestions, and comments are welcome.
     </div>
     <div class="sfc-member">
-        Powered by <a href="https://twitter.com/UlricQin" target="_blank">UlricQin</a>
+        Powered by <a href="/login" target="_blank">Docooler</a>
     </div>
+    {{if .IsAdmin}}
+    <div >
+        logout <a href="/logout" target="_blank">ByeBye</a>
+    </div>
+    {{end}}
 </footer>
 
     </div>

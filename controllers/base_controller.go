@@ -24,6 +24,7 @@ func (this *BaseController) Prepare() {
 	this.Data["RootEmail"] = g.RootEmail
 	this.Data["RootPortrait"] = g.RootPortrait
 	this.AssignIsAdmin()
+	this.Data["IsAdmin"] = this.IsAdmin
 	if app, ok := this.AppController.(Checker); ok {
 		app.CheckLogin()
 	}
